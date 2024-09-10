@@ -8,7 +8,16 @@ export const getBaseConfig = (): Configuration => ({
     baseApiUrl: process.env.BASE_API_URL,
     endpoints: {
       user: {
-        getActivity: (user: string) => `/users/${user}/events`
+        getUser: (user: string) => `/users/${user}`,
+        getUserFollowers: (user: string) => `/users/${user}/followers`,
+        getUserFollowing: (user: string) => `/users/${user}/following`
+      },
+      repository: {
+        getRepository: (owner: string, repo: string) => `/repos/${owner}/${repo}`,
+        getUserPublicRepositories: (user: string) => `/users/${user}/repos`
+      },
+      event: {
+        getUserEvents: (user: string) =>  `/users/${user}/events`
       }
     }
   }
