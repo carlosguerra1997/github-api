@@ -5,6 +5,7 @@ import { Configuration } from '@config/Configuration'
 export const getBaseConfig = (): Configuration => ({
   hostname: process.env.HOSTNAME || '',
   github: {
+    baseUrl: 'https://github.com',
     baseApiUrl: process.env.BASE_API_URL,
     endpoints: {
       user: {
@@ -14,6 +15,7 @@ export const getBaseConfig = (): Configuration => ({
       },
       repository: {
         getRepository: (owner: string, repo: string) => `/repos/${owner}/${repo}`,
+        getRepositoryActivity: (owner: string, repo: string) => `/repos/${owner}/${repo}/activity`,
         getUserPublicRepositories: (user: string) => `/users/${user}/repos`
       },
       event: {
