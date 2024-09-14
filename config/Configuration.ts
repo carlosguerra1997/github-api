@@ -4,6 +4,7 @@ export interface Configuration {
 }
 
 export interface GithubConfig {
+  baseUrl: string
   baseApiUrl: string
   endpoints: GithubEndpoints
 }
@@ -16,6 +17,7 @@ interface GithubEndpoints {
   },
   repository: {
     getRepository: (owner: string, repo: string) => string
+    getRepositoryActivity: (owner: string, repo: string) => string
     getUserPublicRepositories: (user: string) => string
   }
   event: {
