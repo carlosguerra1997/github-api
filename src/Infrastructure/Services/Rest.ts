@@ -38,11 +38,11 @@ export abstract class Rest {
     return response
   }
 
-  private buildResponse(): RestResponse {
-    return new RestResponse()
-  }
-
   private handleRequest(request: RestRequest): AxiosRequestConfig {
     return request.getConfig(this.domain)
+  }
+
+  private buildResponse(): RestResponse {
+    return new RestResponse()
   }
 }
