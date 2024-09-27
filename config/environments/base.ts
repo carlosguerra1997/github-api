@@ -6,7 +6,7 @@ export const getBaseConfig = (): Configuration => ({
   hostname: process.env.HOSTNAME || '',
   github: {
     baseUrl: 'https://github.com',
-    baseApiUrl: process.env.BASE_API_URL,
+    baseApiUrl: process.env.BASE_API_URL || '',
     endpoints: {
       user: {
         getUser: (user: string) => `/users/${user}`,
