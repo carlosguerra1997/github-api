@@ -24,11 +24,6 @@ export abstract class Rest {
     }
   }
 
-  private throwException(err: AxiosError): void {
-    const error = new RestException(err)
-    throw error
-  }
-
   private async internalCall(request: RestRequest): Promise<any> {
     const response = this.buildResponse()
 
@@ -42,7 +37,12 @@ export abstract class Rest {
     return request.getConfig(this.domain)
   }
 
-  private buildResponse(): RestResponse {
+  protected buildResponse(): RestResponse {
     return new RestResponse()
+  }
+
+  protected throwException(err: AxiosError): void {
+    const error = new RestException(err)
+    throw error
   }
 }
