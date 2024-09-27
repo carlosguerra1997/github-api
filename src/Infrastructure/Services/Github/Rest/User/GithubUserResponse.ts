@@ -1,3 +1,5 @@
+import { RestResponse } from '@infrastructure/Services/RestResponse'
+
 export type GithubUserData = {
   login: string
   id: number
@@ -31,4 +33,10 @@ export type GithubUserData = {
   following: number
   created_at: string
   updated_at: string
+}
+
+export class GithubUserResponse extends RestResponse {
+  protected handleResult(data: GithubUserData): void {
+    this.data = data
+  }
 }
