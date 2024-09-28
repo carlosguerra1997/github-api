@@ -18,11 +18,13 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
+      "@config/*": ["config/*"],
+      "@common/*": ["./src/common/*"],
       "@application/*": ["./src/Application/*"],
       "@domain/*": ["./src/Domain/*"],
       "@infrastructure/*": ["./src/Infrastructure/*"],
       "@presentation/*": ["./src/Presentation/*"],
-      "@config/*": ["config/*"]
+      "@test/*": ["test/*"]
     }
   }
 }
