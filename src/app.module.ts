@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common'
 
-import { DefaultController } from '@infrastructure/Controllers/DefaultController'
+import { DefaultController } from '@common/Infrastructure/Controllers/DefaultController'
 
-import { CommonModule } from '@infrastructure/Modules/CommonModule'
-import { GithubModule } from '@infrastructure/Modules/GithubModule'
+import { CommonModule } from '@common/Infrastructure/CommonModule'
+import { GithubModule } from '@modules/Infrastructure/EntityModules/GithubModule'
 
 @Module({
   controllers: [
