@@ -21,6 +21,7 @@ interface GithubEndpoints {
     getUserPublicRepositories: (user: string) => string
   }
   event: {
+    getPublicEvents: () => string
     getUserPublicEvents: (user: string) => string
   }
 }

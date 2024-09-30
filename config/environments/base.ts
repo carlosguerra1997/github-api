@@ -19,6 +19,7 @@ export const getBaseConfig = (): Configuration => ({
         getUserPublicRepositories: (user: string) => `/users/${user}/repos`
       },
       event: {
+        getPublicEvents: () => '/events',
         getUserPublicEvents: (user: string) =>  `/users/${user}/events/public`
       }
     }
