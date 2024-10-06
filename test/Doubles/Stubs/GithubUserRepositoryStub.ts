@@ -1,10 +1,10 @@
 import { HttpStatus } from '@nestjs/common'
 
-import { GithubUser } from '@domain/Github/User/GithubUser'
-import { GithubUserRepository } from '@domain/Github/User/GithubUserRepository'
+import { GithubUser } from '@modules/Domain/Github/User/GithubUser'
+import { GithubUserRepository } from '@modules/Domain/Github/User/GithubUserRepository'
 
-import { GithubUserRestException } from '@infrastructure/Services/Github/Rest/User/GithubUserRestException'
-import { RestException } from '@infrastructure/Services/RestException'
+import { GithubUserRestException } from '@modules/Infrastructure/Services/Github/Rest/User/GithubUserRestException'
+import { RestException } from '@common/Infrastructure/Services/RestException'
 
 import { EntityRepositoryStub } from '@test/Doubles/Stubs/EntityRepositoryStub'
 import { mockAxiosError } from '@test/Doubles/Mocks/AxiosError'
