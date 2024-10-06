@@ -1,4 +1,4 @@
-import { RestException } from '@infrastructure/Services/RestException'
+import { RestException } from '@common/Infrastructure/Services/RestException'
 
 export abstract class EntityRepositoryStub<T> {
   public error: Error | RestException
